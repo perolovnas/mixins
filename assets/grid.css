@@ -1,0 +1,114 @@
+/* 
+*  CSS TABLE OF CONTENTS
+*   
+*  1.0 - Wrapper
+*  2.0 - Flex-grid
+*/
+/*
+***************************************
+1 Wrappers
+***************************************
+*/
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.wrapper .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .row.fluid {
+  width: 100%;
+}
+
+.wrapper .row.fixed {
+  width: calc(100% - 100vw / 7);
+}
+
+.wrapper .row .flex-grid {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .row .flex-grid.justify-content___start {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.wrapper .row .flex-grid.justify-content___end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.wrapper .row .flex-grid.justify-content___center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .row .flex-grid.justify-content___space-around {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.wrapper .row .flex-grid.justify-content___space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .row .flex-grid .flex-item {
+  width: calc(100% / 4);
+}
+
+@media (max-width: 1280px) {
+  .wrapper .row .flex-grid .flex-item {
+    width: calc(100% / 3);
+  }
+}
+
+@media (max-width: 960px) {
+  .wrapper .row .flex-grid .flex-item {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper .row .flex-grid .flex-item {
+    width: calc(100% / 1);
+  }
+}
+
+/*
+***************************************
+2 Flex-grid 
+***************************************
+*/
+.flex-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=grid.css.map */

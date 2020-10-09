@@ -1,0 +1,92 @@
+/* 
+*  CSS TABLE OF CONTENTS
+*   
+*  1.0 - Wrapper
+*  2.0 - Flex-grid
+*/
+
+/*
+***************************************
+1 Wrappers
+***************************************
+*/
+
+// Wrapper
+@mixin wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &.fluid {
+      width: 100%;
+    }
+
+    &.fixed {
+      width: calc(100% - 100vw / 7);
+    }
+
+    .flex-grid {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      &.justify-content___start {
+        justify-content: flex-start;
+      }
+
+      &.justify-content___end {
+        justify-content: flex-end;
+      }
+
+      &.justify-content___center {
+        justify-content: center;
+      }
+
+      &.justify-content___space-around {
+        justify-content: space-around;
+      }
+
+      &.justify-content___space-between {
+        justify-content: space-between;
+      }
+
+      .flex-item {
+        width: calc(100% / 4);
+
+        @media (max-width: 1280px) {
+          width: calc(100% / 3);
+        }
+
+        @media (max-width: 960px) {
+          width: calc(100% / 2);
+        }
+
+        @media (max-width: 600px) {
+          width: calc(100% / 1);
+        }
+      }
+    }
+  }
+}
+.wrapper {
+  @include wrapper;
+}
+
+/*
+***************************************
+2 Flex-grid 
+***************************************
+*/
+@mixin flex-grid {
+  display: flex;
+}
+.flex-grid {
+  @include flex-grid;
+}
